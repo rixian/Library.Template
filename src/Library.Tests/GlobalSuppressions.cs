@@ -13,29 +13,8 @@
 // LAWS AND INTERNATIONAL TREATIES. THE RECEIPT OR POSSESSION OF THIS SOURCE CODE AND/OR RELATED INFORMATION DOES NOT CONVEY OR IMPLY ANY RIGHTS
 // TO REPRODUCE, DISCLOSE OR DISTRIBUTE ITS CONTENTS, OR TO MANUFACTURE, USE, OR SELL ANYTHING THAT IT MAY DESCRIBE, IN WHOLE OR IN PART.
 
-namespace Library
-{
-    using System;
-
-    /// <summary>
-    /// My first class.
-    /// </summary>
-    public static class Calculator
-    {
-        /// <summary>
-        /// Adds two integers.
-        /// </summary>
-        /// <param name="a">The first integer.</param>
-        /// <param name="b">The second integer.</param>
-        /// <returns>The sum of the two integers.</returns>
-        public static int Add(int a, int b) => a + b;
-
-        /// <summary>
-        /// Subtracts one integer from another.
-        /// </summary>
-        /// <param name="a">The original integer.</param>
-        /// <param name="b">The integer to subtract.</param>
-        /// <returns>The difference between the two integers.</returns>
-        public static int Subtract(int a, int b) => a - b;
-    }
-}
+// This file is used by Code Analysis to maintain SuppressMessage
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given
+// a specific target and scoped to a namespace, type, member, etc.
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores", Justification = "Unit Tests")]
