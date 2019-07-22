@@ -114,9 +114,6 @@ try {
         'Library'=$LibraryName
         'COMPANY-PLACEHOLDER'=$Author
     }
-    Replace-Placeholders -Path "LICENSE" -Replacements @{
-        'COMPANY-PLACEHOLDER'=$Author
-    }
     Replace-Placeholders -Path "src/stylecop.json" -Replacements @{
         'COMPANY-PLACEHOLDER'=$Author
     }
