@@ -115,7 +115,6 @@ try {
         'COMPANY-PLACEHOLDER'=$Author
     }
     Replace-Placeholders -Path "src/$LibraryName.Tests/GlobalSuppressions.cs" -Replacements @{
-        'Library'=$LibraryName
         'COMPANY-PLACEHOLDER'=$Author
     }
     Replace-Placeholders -Path "src/stylecop.json" -Replacements @{
