@@ -1,7 +1,4 @@
 steps:
-- script: dotnet restore  /v:m /bl:"$(Build.ArtifactStagingDirectory)/build_logs/restore.binlog"
-  displayName: dotnet restore
-  workingDirectory: src
 
 - script: dotnet build --no-restore -c $(BuildConfiguration) /v:m /bl:"$(Build.ArtifactStagingDirectory)/build_logs/build.binlog"
   displayName: dotnet build
@@ -18,7 +15,7 @@ steps:
     arguments: --no-build -c $(BuildConfiguration) -f net472 --filter "TestCategory!=FailsInCloudTest" -v n /p:CollectCoverage=true
     testRunTitle: net472-$(Agent.JobName)
     workingDirectory: src
-  condition: eq(variables['Agent.OS'], 'Windows_NT')
+  condition: and(succeeded(), eq(variables['Agent.OS'], 'Windows_NT'))
 
 - task: DotNetCoreCLI@2
   displayName: dotnet test -f netcoreapp2.1
