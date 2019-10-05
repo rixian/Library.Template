@@ -2,8 +2,8 @@ trigger:
   branches:
     include:
     - master
-    - validate/*
-    - release/*
+    - 'validate/*'
+    - 'release/*'
   paths:
     exclude:
     - doc/
