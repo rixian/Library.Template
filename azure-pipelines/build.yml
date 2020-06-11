@@ -17,7 +17,7 @@ jobs:
 
 - job: Linux
   pool:
-    vmImage: Ubuntu 16.04
+    vmImage: Ubuntu 18.04
   steps:
   - checkout: self
     clean: true
@@ -27,7 +27,7 @@ jobs:
 
 - job: macOS
   pool:
-    vmImage: macOS 10.13
+    vmImage: macOS-10.15
   steps:
   - checkout: self
     clean: true
@@ -41,7 +41,7 @@ jobs:
   - Linux
   - macOS
   pool:
-    vmImage: Ubuntu 16.04
+    vmImage: Ubuntu 18.04
   condition: succeededOrFailed()
   steps:
   - checkout: self

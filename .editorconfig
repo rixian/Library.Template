@@ -16,7 +16,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # Xml project files
-[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
+[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj,runsettings}]
 indent_size = 2
 
 # Xml config files
@@ -155,3 +155,11 @@ csharp_new_line_before_members_in_anonymous_types = true
 
 # Blocks are allowed
 csharp_prefer_braces = true:silent
+
+[*.cs]
+
+# SA1130: Use lambda syntax
+dotnet_diagnostic.SA1130.severity = silent
+
+[*.sln]
+indent_style = tab
